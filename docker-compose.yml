@@ -1,0 +1,15 @@
+
+services:
+  frontend:
+    build: ./question_backend/social-media-backend
+    ports:
+      - "80:80"
+    depends_on:
+      - backend
+  
+  backend:
+    build: ./question2/social-media-analytics
+    ports:
+      - "8080:8080"
+    environment:
+      - PORT=8080
